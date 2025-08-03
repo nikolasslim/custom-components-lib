@@ -1,0 +1,111 @@
+$primary-color: #007bff;
+$border-color: #ced4da;
+$text-color: #212529;
+$label-color: #6c757d;
+$background-color: #ffffff;
+$disabled-bg-color: #e9ecef;
+$hover-color: #f8f9fa;
+
+
+.selectWrap {
+  position: relative;
+  width: 280px;
+
+
+  .selectLabel {
+    position: absolute;
+    left: 12px;
+    top: 14px;
+    color: $label-color;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+    background-color: $background-color;
+    padding: 0 4px;
+  }
+
+
+  &.hasValue .selectLabel {
+    top: -9px;
+    font-size: 0.85rem;
+    color: $primary-color;
+  }
+}
+
+
+.selectInput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 88%;
+  padding: 14px 16px;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  background-color: $background-color;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  color: $text-color;
+
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+
+    + .selectLabel {
+      color: $primary-color;
+    }
+  }
+
+
+  .selectArrow {
+    transition: transform 0.2s ease;
+    color: $label-color;
+  }
+
+  &.open {
+    border-color: $primary-color;
+
+    .selectArrow {
+      transform: rotate(180deg);
+    }
+  }
+
+
+  &.disabled {
+    cursor: not-allowed;
+    background-color: $disabled-bg-color;
+    color: $label-color;
+  }
+}
+
+
+.selectDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: $background-color;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  max-height: 220px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.selectOption {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: $text-color;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+
+  &.selected {
+    background-color: lighten($primary-color, 40%);
+    font-weight: 500;
+  }
+}

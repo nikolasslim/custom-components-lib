@@ -1,0 +1,43 @@
+$main-color: rgb(25, 118, 210);
+
+
+.button {
+  font-size: 14px;
+  font-family: Roboto;
+  border-radius: 6px;
+  color: $main-color;
+  background-color: $main-color;
+  border: none;
+  box-shadow: none;
+  outline: none;
+
+
+  &-small {
+    padding: 4px 10px;
+  }
+
+  &-medium {
+    padding: 6px 16px;
+  }
+
+  &-large {
+    padding: 8px 22px;
+  }
+
+  &-outlined {
+    border: 1px solid $main-color;
+    color: $main-color;
+    background-color: white;
+  }
+
+
+  &-contained {
+    border: 1px solid $main-color;
+    color: white;
+    background-color: $main-color;
+  }
+
+  &-text {
+    background-color: white;
+  }
+}
