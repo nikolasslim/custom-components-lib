@@ -1,21 +1,34 @@
 {
-  "name": "task11",
+  "name": "@nikolasslim/custom-components-lib",
   "version": "1.4.0",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "test": "jest",
-    "build": "npm run format && npm run lint && webpack",
+    "build": "npm run format && npm run lint && npm run build:types && webpack",
+    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist",
     "tsc": "tsc",
     "lint": "eslint",
     "format": "npx prettier . --write",
     "prepare": "husky",
     "storybook": "storybook dev -p 6007",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "react",
+    "components",
+    "ui",
+    "typescript",
+    "storybook"
+  ],
+  "author": "Nikolaj Slimenev",
+  "license": "MIT",
+  "description": "A collection of reusable React components built with TypeScript and SCSS",
   "devDependencies": {
     "@babel/core": "^7.28.0",
     "@babel/preset-env": "^7.28.0",

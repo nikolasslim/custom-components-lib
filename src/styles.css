@@ -1,0 +1,6 @@
+/* Import all component styles */
+@import './components/Button/Button.module.scss';
+@import './components/TextField/TextField.module.scss';
+@import './components/Select/Select.module.scss';
+@import './components/Checkbox/Checkbox.module.scss';
+@import './components/Modal/Modal.module.scss'; 

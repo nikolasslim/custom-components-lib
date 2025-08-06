@@ -1,6 +1,9 @@
-import Button from "../src/components/Button/Button";
-import TextField from "../src/components/TextField/TextField";
-import Select from "../src/components/Select/Select";
-import Checkbox from "../src/components/Checkbox/Checkbox";
+import Button from "./components/Button/Button";
+import TextField from "./components/TextField/TextField";
+import Select from "./components/Select/Select";
+import Checkbox from "./components/Checkbox/Checkbox";
 
-export { Button, TextField, Select, Checkbox };
+// Import styles
+import "./styles.css";
+
+export { Button, TextField, Select, Checkbox, Modal, Switch};

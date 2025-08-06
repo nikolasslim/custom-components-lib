@@ -34,6 +34,10 @@ module.exports = {
           "sass-loader",
         ],
       },
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
     ],
   },
   externals: {
@@ -44,7 +48,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: "styles.css",
     }),
   ],
 };
