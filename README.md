@@ -14,18 +14,18 @@ npm install @nikolasslim1/custom-components-lib
 
 ```jsx
 import React from "react";
-import {Button, TextField, Modal} from "@nikolasslim1/custom-components-lib";
+import { Button, TextField, Modal } from "@nikolasslim1/custom-components-lib";
 
 // ⚠️ IMPORTANT: Import the styles!
 import "@nikolasslim1/custom-components-lib/dist/styles.css";
 
 function App() {
-    return (
-        <div>
-            <Button label="Click me" variant="contained" size="medium"/>
-            <TextField label="Email" placeholder="Enter your email"/>
-        </div>
-    );
+  return (
+    <div>
+      <Button label="Click me" variant="contained" size="medium" />
+      <TextField label="Email" placeholder="Enter your email" />
+    </div>
+  );
 }
 ```
 
@@ -46,10 +46,10 @@ function App() {
 
 ```jsx
 <Button
-    label="Click me"
-    size="medium"
-    variant="contained"
-    onClick={() => console.log("clicked")}
+  label="Click me"
+  size="medium"
+  variant="contained"
+  onClick={() => console.log("clicked")}
 />
 ```
 
@@ -64,10 +64,10 @@ function App() {
 
 ```jsx
 <TextField
-    label="Email"
-    placeholder="Enter your email"
-    error="Invalid email"
-    onChange={(e) => setEmail(e.target.value)}
+  label="Email"
+  placeholder="Enter your email"
+  error="Invalid email"
+  onChange={(e) => setEmail(e.target.value)}
 />
 ```
 
@@ -83,12 +83,12 @@ function App() {
 
 ```jsx
 <Select
-    label="Country"
-    options={[
-        {value: "us", label: "United States"},
-        {value: "ca", label: "Canada"},
-    ]}
-    onChange={(e) => setCountry(e.target.value)}
+  label="Country"
+  options={[
+    { value: "us", label: "United States" },
+    { value: "ca", label: "Canada" },
+  ]}
+  onChange={(e) => setCountry(e.target.value)}
 />
 ```
 
@@ -96,25 +96,25 @@ function App() {
 
 ```jsx
 <Checkbox
-    label="Accept terms"
-    checked={isChecked}
-    onChange={(e) => setIsChecked(e.target.checked)}
+  label="Accept terms"
+  checked={isChecked}
+  onChange={(e) => setIsChecked(e.target.checked)}
 />
 ```
 
 ### Switch
 
 ```jsx
-<Switch checked={isEnabled} onChange={(e) => setIsEnabled(e.target.checked)}/>
+<Switch checked={isEnabled} onChange={(e) => setIsEnabled(e.target.checked)} />
 ```
 
 ### Modal
 
 ```jsx
 <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-    <h2>Modal Title</h2>
-    <p>Modal content goes here</p>
-    <Button label="Close" onClick={() => setIsOpen(false)}/>
+  <h2>Modal Title</h2>
+  <p>Modal content goes here</p>
+  <Button label="Close" onClick={() => setIsOpen(false)} />
 </Modal>
 ```
 
