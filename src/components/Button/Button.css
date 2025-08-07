@@ -1,67 +1,48 @@
-/* Button Component Styles */
+/* Button.css */
+
 .custom-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: inherit;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-  outline: none;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    appearance: none;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 
-.custom-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-/* Button Sizes */
 .custom-button-small {
-  padding: 8px 16px;
-  font-size: 14px;
-  min-height: 32px;
+    padding: 4px 10px;
 }
 
 .custom-button-medium {
-  padding: 12px 24px;
-  font-size: 16px;
-  min-height: 40px;
+    padding: 6px 16px;
 }
 
 .custom-button-large {
-  padding: 16px 32px;
-  font-size: 18px;
-  min-height: 48px;
-}
-
-/* Button Variants */
-.custom-button-text {
-  background: transparent;
-  color: #1976d2;
-}
-
-.custom-button-text:hover {
-  background: rgba(25, 118, 210, 0.04);
-}
-
-.custom-button-contained {
-  background: #1976d2;
-  color: white;
-}
-
-.custom-button-contained:hover {
-  background: #1565c0;
+    padding: 8px 22px;
 }
 
 .custom-button-outlined {
-  background: transparent;
-  color: #1976d2;
-  border: 1px solid #1976d2;
+    border: 1px solid #1976d2;
+    color: #1976d2;
+    background-color: white;
 }
 
-.custom-button-outlined:hover {
-  background: rgba(25, 118, 210, 0.04);
+.custom-button-contained {
+    border: 1px solid #1976d2;
+    color: white;
+    background-color: #1976d2;
+}
+
+.custom-button-text {
+    border: none;
+    color: #1976d2;
+    background-color: white;
 }
