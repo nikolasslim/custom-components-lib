@@ -1,0 +1,68 @@
+/* Checkbox Component Styles */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-checkbox-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.custom-checkbox-checkmark {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background: white;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-checkbox-input:checked + .custom-checkbox-checkmark {
+  background: #1976d2;
+  border-color: #1976d2;
+}
+
+.custom-checkbox-input:focus + .custom-checkbox-checkmark {
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+}
+
+.custom-checkbox-checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox-input:checked + .custom-checkbox-checkmark::after {
+  display: block;
+}
+
+.custom-checkbox-label {
+  font-size: 16px;
+  color: #333;
+}
+
+.custom-checkbox:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.custom-checkbox:disabled .custom-checkbox-label {
+  color: #666;
+}

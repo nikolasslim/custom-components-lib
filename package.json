@@ -1,8 +1,9 @@
 {
-  "name": "@nikolasslim/custom-components-lib",
+  "name": "@nikolasslim1/custom-components-lib",
   "version": "1.4.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "style": "./dist/styles.css",
   "files": [
     "dist",
     "README.md"

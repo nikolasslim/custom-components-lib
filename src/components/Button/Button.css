@@ -1,0 +1,67 @@
+/* Button Component Styles */
+.custom-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.custom-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Button Sizes */
+.custom-button-small {
+  padding: 8px 16px;
+  font-size: 14px;
+  min-height: 32px;
+}
+
+.custom-button-medium {
+  padding: 12px 24px;
+  font-size: 16px;
+  min-height: 40px;
+}
+
+.custom-button-large {
+  padding: 16px 32px;
+  font-size: 18px;
+  min-height: 48px;
+}
+
+/* Button Variants */
+.custom-button-text {
+  background: transparent;
+  color: #1976d2;
+}
+
+.custom-button-text:hover {
+  background: rgba(25, 118, 210, 0.04);
+}
+
+.custom-button-contained {
+  background: #1976d2;
+  color: white;
+}
+
+.custom-button-contained:hover {
+  background: #1565c0;
+}
+
+.custom-button-outlined {
+  background: transparent;
+  color: #1976d2;
+  border: 1px solid #1976d2;
+}
+
+.custom-button-outlined:hover {
+  background: rgba(25, 118, 210, 0.04);
+}

@@ -1,6 +1,6 @@
 import { TextFieldProps } from "../../types/textField";
 import React, { useId, useState } from "react";
-import styles from "./TextField.module.scss";
+import "./TextField.css";
 
 export default function TextField({
   error = false,
@@ -17,13 +17,14 @@ export default function TextField({
 
   const isControlled = inputsValue !== undefined;
   const value = isControlled ? inputsValue : fieldsInput;
-  const valueClass = (value ?? "") === "" ? styles.emptyValue : styles.isValue;
+  const valueClass =
+    (value ?? "") === "" ? "custom-textfield-empty" : "custom-textfield-filled";
 
   const hasError = typeof error === "function" ? error() : error;
-  const errorClass = hasError ? styles.isError : styles.isValid;
+  const errorClass = hasError ? "custom-textfield-error" : "";
 
-  const container = [styles.textFieldContainer, errorClass].join(" ");
-  const inputField = [styles.textFieldInput, valueClass, errorClass].join(" ");
+  const container = `custom-textfield ${errorClass}`.trim();
+  const inputField = `custom-textfield-input ${valueClass}`.trim();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = e.target.value;
@@ -44,9 +45,14 @@ export default function TextField({
         onChange={handleInputChange}
         {...props}
       />
-      <label className={styles.textFieldLabel} htmlFor={inputId}>
+      <label className="custom-textfield-label" htmlFor={inputId}>
         {hasError ? "Error" : label}
       </label>
+      {hasError && (
+        <div className="custom-textfield-error-message">
+          {typeof error === "string" ? error : "This field is required"}
+        </div>
+      )}
     </div>
   );
 }

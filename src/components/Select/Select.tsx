@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useEffect, useId, useRef, useState } from "react";
 import { selectProps } from "../../types/select";
-import styles from "./Select.module.scss";
+import "./Select.css";
 
 export default function Select({
   label,
@@ -15,7 +15,7 @@ export default function Select({
   const selectId = props.id || generatedId;
   const selectRef = useRef<HTMLDivElement>(null);
 
-  const wrapFieldClass = `${styles.selectWrap} ${value === "" ? styles.emptyValue : styles.hasValue}`;
+  const wrapFieldClass = `custom-select ${value === "" ? "custom-select-empty" : "custom-select-filled"}`;
 
   const selectedOption = options.find((option) => option.value === value);
   const displayValue = selectedOption ? selectedOption.label : "";
@@ -58,14 +58,14 @@ export default function Select({
   return (
     <div className={wrapFieldClass} ref={selectRef}>
       {label && (
-        <label htmlFor={selectId} className={styles.selectLabel}>
+        <label htmlFor={selectId} className="custom-select-label">
           {label}
         </label>
       )}
 
       <div
         id={selectId}
-        className={`${styles.selectInput} ${disabled ? styles.disabled : ""} ${isOpen ? styles.open : ""}`}
+        className={`custom-select-select ${disabled ? "custom-select-disabled" : ""} ${isOpen ? "custom-select-open" : ""}`}
         onClick={handleToggle}
         tabIndex={disabled ? -1 : 0}
         onKeyDown={(e) => {
@@ -75,16 +75,16 @@ export default function Select({
           }
         }}
       >
-        <span className={styles.selectValue}>{displayValue || ""}</span>
-        <span className={styles.selectArrow}>▼</span>
+        <span className="custom-select-value">{displayValue || ""}</span>
+        <span className="custom-select-arrow">▼</span>
       </div>
 
       {isOpen && (
-        <div className={styles.selectDropdown}>
+        <div className="custom-select-dropdown">
           {options.map((option) => (
             <div
               key={option.value}
-              className={`${styles.selectOption} ${option.value === value ? styles.selected : ""}`}
+              className={`custom-select-option ${option.value === value ? "custom-select-option-selected" : ""}`}
               onClick={() => handleOptionClick(option.value)}
             >
               {option.label}

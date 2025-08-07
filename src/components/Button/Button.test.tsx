@@ -14,15 +14,15 @@ describe("Button component props", () => {
     render(<Button label="By default" />);
     const buttonElement = screen.getByText(/By default/i);
 
-    expect(buttonElement).toHaveClass("button-small");
-    expect(buttonElement).toHaveClass("button-text");
+    expect(buttonElement).toHaveClass("custom-button-small");
+    expect(buttonElement).toHaveClass("custom-button-text");
   });
 
   describe("size prop", () => {
     const sizes: Array<["small" | "medium" | "large", string]> = [
-      ["small", "button-small"],
-      ["medium", "button-medium"],
-      ["large", "button-large"],
+      ["small", "custom-button-small"],
+      ["medium", "custom-button-medium"],
+      ["large", "custom-button-large"],
     ];
 
     test.each(sizes)(
@@ -37,9 +37,9 @@ describe("Button component props", () => {
 
   describe("variant prop", () => {
     const variants: Array<["contained" | "outlined" | "text", string]> = [
-      ["text", "button-text"],
-      ["contained", "button-contained"],
-      ["outlined", "button-outlined"],
+      ["text", "custom-button-text"],
+      ["contained", "custom-button-contained"],
+      ["outlined", "custom-button-outlined"],
     ];
 
     test.each(variants)(

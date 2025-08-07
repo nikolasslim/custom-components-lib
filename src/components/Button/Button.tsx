@@ -1,6 +1,6 @@
 import React from "react";
 import { ButtonProps } from "../../types/button";
-import styles from "./Button.module.scss";
+import "./Button.css";
 
 export default function Button({
   label,
@@ -11,9 +11,9 @@ export default function Button({
   return (
     <button
       className={[
-        styles.button,
-        styles[`button-${size}`],
-        styles[`button-${variant}`],
+        "custom-button",
+        `custom-button-${size}`,
+        `custom-button-${variant}`,
       ].join(" ")}
       {...props}
     >

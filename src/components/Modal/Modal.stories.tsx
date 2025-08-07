@@ -19,7 +19,7 @@ type Story = StoryObj<typeof Modal>;
 
 export const Test1: Story = {
   name: "modal test",
-  render: (arg) => {
+  render: () => {
     const [open, setOpen] = useState(false);
 
     return (

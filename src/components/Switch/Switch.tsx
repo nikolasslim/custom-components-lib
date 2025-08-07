@@ -1,18 +1,20 @@
 import React from "react";
 import { SwitchProps } from "../../types/switch";
-import styles from "./Switch.module.scss";
+import "./Switch.css";
 
 export default function Switch({ checked, disabled, onChange }: SwitchProps) {
   return (
-    <label className={styles.switch}>
+    <label className="custom-switch">
       <input
         type="checkbox"
+        className="custom-switch-input"
         checked={checked}
         disabled={disabled}
         onChange={onChange}
       />
-      <span className={`${styles.slider}`}></span>
-      <span className={`${styles.sliderCircle}`}></span>
+      <span className="custom-switch-track">
+        <span className="custom-switch-thumb"></span>
+      </span>
     </label>
   );
 }

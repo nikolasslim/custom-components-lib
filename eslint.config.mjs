@@ -25,7 +25,6 @@ export default defineConfig([
   },
   {
     rules: {
-      "capitalized-comments": ["error", "always"],
       "prettier/prettier": "error",
     },
   },
@@ -36,5 +35,9 @@ export default defineConfig([
     "webpack.config.js",
     "jest.config.js",
     "babel.config.js",
+    "node_modules/*",
+    "storybook-static/*",
+    "*.config.js",
+    "*.config.mjs",
   ]),
 ]);

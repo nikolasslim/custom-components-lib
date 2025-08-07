@@ -19,24 +19,12 @@ module.exports = {
         exclude: [/node_modules/, path.resolve(__dirname, "dist")],
       },
       {
-        test: /\.module\.scss$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-            options: {
-              esModule: false,
-              modules: {
-                exportLocalsConvention: "camelCase",
-              },
-            },
-          },
-          "sass-loader",
-        ],
-      },
-      {
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+      {
+        test: /\.scss$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
     ],
   },

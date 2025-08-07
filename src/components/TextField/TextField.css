@@ -1,0 +1,54 @@
+/* TextField Component Styles */
+.custom-textfield {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.custom-textfield-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: inherit;
+  background: white;
+  transition: border-color 0.2s ease-in-out;
+  outline: none;
+}
+
+.custom-textfield-input:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+}
+
+.custom-textfield-input:disabled {
+  background: #f5f5f5;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.custom-textfield-label {
+  position: absolute;
+  top: -8px;
+  left: 12px;
+  background: white;
+  padding: 0 4px;
+  font-size: 12px;
+  color: #666;
+  pointer-events: none;
+}
+
+.custom-textfield-error .custom-textfield-input {
+  border-color: #d32f2f;
+}
+
+.custom-textfield-error .custom-textfield-label {
+  color: #d32f2f;
+}
+
+.custom-textfield-error-message {
+  color: #d32f2f;
+  font-size: 12px;
+  margin-top: 4px;
+}

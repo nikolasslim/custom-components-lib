@@ -6,10 +6,4 @@ export interface SwitchProps extends ComponentProps<"input"> {
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export default function ({
-  disabled,
-  checked,
-  onChange,
-}: SwitchProps): import("react").JSX.Element {}
-
 export {};
